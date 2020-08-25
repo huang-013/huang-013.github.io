@@ -157,6 +157,84 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/25/Python%20-%20Mac%E4%B8%8BPyCharm&PyQt5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="huang013">
+      <meta itemprop="description" content="大概是一些学习笔记跟日常">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="还没想好叫啥">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/25/Python%20-%20Mac%E4%B8%8BPyCharm&PyQt5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">Python - Mac下PyCharm&PyQt5环境搭建</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-25 14:53:25 / 修改时间：15:27:35" itemprop="dateCreated datePublished" datetime="2020-08-25T14:53:25+08:00">2020-08-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>macOS下PyQt-tools的搭建折腾了很久，发现python的包没有macOS版本的包，找了好久，终于装上了…</p>
+<h1 id="Qt"><a href="#Qt" class="headerlink" title="Qt"></a>Qt</h1><hr>
+<p>需要提前装好Qt，首先，进入<a href="http://download.qt.io/archive/qt/" target="_blank" rel="noopener">QT官网</a>选择需要的版本， 我选的是qt-opensource-mac-x64-5.14.1.dmg，下载安装完成之后就好了。这个安装包不知道为什么，我就是下载不下来，用了各种方法，最后还是找了个国外的朋友帮我下下来的…</p>
+<h1 id="PyCharm"><a href="#PyCharm" class="headerlink" title="PyCharm"></a>PyCharm</h1><hr>
+<h2 id="配置-QtDesigner"><a href="#配置-QtDesigner" class="headerlink" title="配置 QtDesigner"></a>配置 QtDesigner</h2><p>这是个Qt的界面可视化工具，可以很方便的设计UI，所见即所得。Designer的位置要找一下，我的是在/usr/local/Cellar/qt/5.14.1/libexec/Designer.app。<br>我们可以在PyCharm中配置Designer的路径，这样就可以在PyCharm中快速启动Designer了。</p>
+<ol>
+<li>打开 PyCharm 的设置</li>
+<li>找到 Tools -&gt; External Tools</li>
+<li>点击 + -&gt; Create Tool</li>
+<li>配置中把「工具设置」中的『程序』填Designer的位置，工作目录填<code>$ProjectFileDir$</code>即可</li>
+</ol>
+<h2 id="配置-PyUIC"><a href="#配置-PyUIC" class="headerlink" title="配置 PyUIC"></a>配置 PyUIC</h2><p>这个工具可以把Qt Designer的UI文件，转换成Py文件。</p>
+<ol>
+<li>打开 PyCharm 的设置</li>
+<li>找到 Tools -&gt; External Tools</li>
+<li>点击 + -&gt; Create Tool</li>
+<li>配置中把「工具设置」中的『程序』填你的python解释器路径，Parameters：<code>-m PyQt5.uic.pyuic $FileName$ -o $FileNameWithoutExtension$.</code>，工作目录填<code>$ProjectFileDir$</code>即可</li>
+</ol>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><hr>
+<p>右键菜单中选择 External Tools 即可</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/20/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -289,7 +367,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
